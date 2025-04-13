@@ -557,7 +557,27 @@
           <version>1.2.8</version>
           <scope>runtime</scope>
         </dependency>
-      </dependencies>
+        
+       <!-- Add these inside the <dependencies> section -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>31.1-jre</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.cdap</groupId>
+            <artifactId>wrangler-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.antlr</groupId>
+            <artifactId>antlr4-runtime</artifactId>
+            <version>4.9.3</version>
+        </dependency>
+                
+       </dependencies>
 
     </profile>
   </profiles>

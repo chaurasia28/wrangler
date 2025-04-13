@@ -140,7 +140,7 @@ numberRange
  ;
 
 value
- : String | Number | Column | Bool
+ : String | Number | Column | Bool | BYTE_SIZE | TIME_DURATION
  ;
 
 ecommand
@@ -256,6 +256,12 @@ Bool
 Number
  : Int ('.' Digit*)?
  ;
+
+fragment BYTE_UNIT: 'B' | 'KB' | 'MB' | 'GB' | 'TB';
+BYTE_SIZE: [0-9]+ ('.' [0-9]+)? BYTE_UNIT;
+
+fragment TIME_UNIT: 'ns' | 'ms' | 's' | 'min' | 'h';
+TIME_DURATION: [0-9]+ ('.' [0-9]+)? TIME_UNIT;
 
 Identifier
  : [a-zA-Z_\-] [a-zA-Z_0-9\-]*

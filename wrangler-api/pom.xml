@@ -41,4 +41,22 @@
     </dependency>
 
   </dependencies>
+   <build>
+    <plugins>
+      <!-- Add the RAT plugin configuration here -->
+      <plugin>
+        <groupId>org.apache.rat</groupId>
+        <artifactId>apache-rat-plugin</artifactId>
+        <configuration>
+          <excludes>
+            <exclude>**/target/**</exclude>
+            <exclude>**/*.json</exclude>
+            <!-- Add other file patterns you want to exclude from license checking -->
+          </excludes>
+        </configuration>
+      </plugin>
+      
+      <!-- Other plugins if any -->
+    </plugins>
+  </build>
 </project>
